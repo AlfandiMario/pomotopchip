@@ -11,6 +11,12 @@ if ! rtk python3 -c 'import json,sys; d=json.load(open("metadata.json")); assert
     echo "FAIL: metadata.json invalid or missing required keys"; fail=1
 fi
 
+if rtk grep -q '@local' metadata.json; then
+    echo "FAIL: uuid uses @local; use a unique domain-qualified uuid for the extensions store"; fail=1
+else
+    echo "ok: uuid is not @local"
+fi
+
 echo "== JS syntax =="
 for f in extension.js prefs.js; do
     if rtk node --check "$f"; then echo "ok: $f"; else echo "FAIL: $f"; fail=1; fi

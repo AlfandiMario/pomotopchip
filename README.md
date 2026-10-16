@@ -1,7 +1,7 @@
 # Pomodoro Chip
 
 A minimal Pomodoro timer that lives as a colored chip in the GNOME Shell top
-bar. Built for Pop!_OS 22.04 (GNOME Shell 42); works on any GNOME Shell 40-44.
+bar. Built and tested on Pop!_OS 22.04 (GNOME Shell 42).
 
 - **Red** = work session
 - **Green** = short break
@@ -43,7 +43,7 @@ then a long break, repeat.
 ./install.sh
 ```
 
-That copies everything to `~/.local/share/gnome-shell/extensions/pomodoro-chip@local`
+That copies everything to `~/.local/share/gnome-shell/extensions/pomodoro-chip@alfandimario.github.io`
 and compiles the settings schema.
 
 Then restart GNOME Shell and enable it:
@@ -52,7 +52,7 @@ Then restart GNOME Shell and enable it:
 # Alt+F2, type: r, Enter  (X11)
 # or log out and back in (Wayland)
 
-gnome-extensions enable pomodoro-chip@local
+gnome-extensions enable pomodoro-chip@alfandimario.github.io
 ```
 
 If the chip doesn't show up immediately, reload the shell.
@@ -62,7 +62,7 @@ If the chip doesn't show up immediately, reload the shell.
 Open the extension preferences:
 
 ```bash
-gnome-extensions prefs pomodoro-chip@local
+gnome-extensions prefs pomodoro-chip@alfandimario.github.io
 ```
 
 Set:
@@ -99,18 +99,18 @@ gsettings set org.gnome.shell.extensions.pomodoro-chip toggle-pomodoro "['<Super
 
 ## Compatibility
 
-Standard GNOME Shell extension, not Pop!_OS-specific. It runs on any distro
-shipping GNOME Shell 40-44 (Ubuntu 21.10+, Fedora 34-39, Pop!_OS 22.04, etc.),
-since those versions share the classic `imports` API this extension uses.
+Built and tested on GNOME Shell 42 (Pop!_OS 22.04). The extension is declared
+for `42` only; other versions are untested. The code targets the classic
+`imports` API shared by GNOME Shell 40-44, so those versions will likely work,
+but they are not verified.
 
-GNOME Shell 45+ (Ubuntu 23.10+, Fedora 39+) removed the `imports` system in
-favor of ES modules, so it will **not** load there without a port. Pop!_OS 22.04
-ships GNOME Shell 42, which is fully supported.
+GNOME Shell 45+ (Ubuntu 23.10+, Fedora 39+) replaced the `imports` system with
+ES modules, so the extension will **not** load there without a port.
 
 ## Uninstall
 
 ```bash
-rm -rf ~/.local/share/gnome-shell/extensions/pomodoro-chip@local
+rm -rf ~/.local/share/gnome-shell/extensions/pomodoro-chip@alfandimario.github.io
 ```
 
 ## Debugging
@@ -124,6 +124,6 @@ journalctl -f -o cat /usr/bin/gnome-shell
 To reload the extension after editing code without full shell restart:
 
 ```bash
-gnome-extensions disable pomodoro-chip@local
-gnome-extensions enable pomodoro-chip@local
+gnome-extensions disable pomodoro-chip@alfandimario.github.io
+gnome-extensions enable pomodoro-chip@alfandimario.github.io
 ```

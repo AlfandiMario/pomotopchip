@@ -1,8 +1,8 @@
 {
-  "uuid": "pomodoro-chip@local",
+  "uuid": "pomodoro-chip@alfandimario.github.io",
   "name": "Pomodoro Chip",
   "description": "Pomodoro timer chip in the top bar: red = work, green = short break, blue = long break",
-  "shell-version": ["40", "41", "42", "43", "44"],
-  "version": 1,
+  "shell-version": ["42"],
+  "url": "https://github.com/AlfandiMario/pomotopchip",
   "settings-schema": "org.gnome.shell.extensions.pomodoro-chip"
 }
