@@ -1,0 +1,17 @@
+.pomodoro-chip {
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin: 4px 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.pomodoro-chip.work  { background-color: #e53935; }  /* red */
+.pomodoro-chip.short { background-color: #43a047; }  /* green */
+.pomodoro-chip.long  { background-color: #1e88e5; }  /* blue */
+
+.pomodoro-chip.paused { opacity: 0.6; }
+
+.pomodoro-chip .sep {
+    opacity: 0.6;
+}

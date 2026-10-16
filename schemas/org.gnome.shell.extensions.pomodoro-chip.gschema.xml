@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.pomodoro-chip"
+          path="/org/gnome/shell/extensions/pomodoro-chip/">
+    <key name="work-duration" type="i">
+      <default>25</default>
+      <summary>Work duration</summary>
+      <description>Length of a work session, in minutes.</description>
+    </key>
+    <key name="short-break-duration" type="i">
+      <default>5</default>
+      <summary>Short break duration</summary>
+      <description>Length of a short break, in minutes.</description>
+    </key>
+    <key name="long-break-duration" type="i">
+      <default>15</default>
+      <summary>Long break duration</summary>
+      <description>Length of a long break, in minutes.</description>
+    </key>
+    <key name="toggle-pomodoro" type="as">
+      <default>["&lt;Control&gt;&lt;Alt&gt;p"]</default>
+      <summary>Pause/resume shortcut</summary>
+      <description>Keyboard shortcut to start/pause the timer.</description>
+    </key>
+    <key name="position" type="s">
+      <default>'left'</default>
+      <summary>Chip position</summary>
+      <description>Panel box for the chip: left, center, or right.</description>
+    </key>
+  </schema>
+</schemalist>
